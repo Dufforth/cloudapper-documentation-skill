@@ -1,0 +1,39 @@
+name: skill-checks
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Every skill has SKILL.md with name and description
+        run: |
+          fail=0
+          for d in */; do
+            [ "$d" = ".github/" ] && continue
+            [ "$d" = "docs/" ] && continue
+            f="$d/SKILL.md"
+            if [ ! -f "$f" ]; then echo "::error::$d has no SKILL.md"; fail=1; continue; fi
+            head -5 "$f" | grep -q '^name: ' || { echo "::error::$f missing name"; fail=1; }
+            head -5 "$f" | grep -q '^description: ' || { echo "::error::$f missing description"; fail=1; }
+          done
+          exit $fail
+      - name: No secrets or tenant IDs
+        run: |
+          if grep -rnEI --exclude-dir=.git --exclude-dir=.github \
+             -e '(password|passwd|client_secret|clientsecret|api[_-]?key|secret)["'"'"' ]*[:=]["'"'"' ]*[A-Za-z0-9+/_-]{8,}' \
+             -e 'Bearer [A-Za-z0-9._-]{20,}' \
+             -e '-----BEGIN [A-Z ]*PRIVATE KEY-----' \
+             -e '\b[0-9]{16}\b' . | grep -v -F -f .github/leakcheck-allow.txt ; then
+            echo "::error::Possible secret or client ID found (lines above). Remove it or make it generic."
+            exit 1
+          fi
+      - name: Report removed lines (owner review)
+        if: github.event_name == 'pull_request'
+        run: |
+          git diff --numstat origin/${{ github.base_ref }}...HEAD | awk '{a+=$1; d+=$2} END {print "added", a, "removed", d; if (d > 0) print "::warning::This pull request removes " d " line(s). The owner must confirm removals."}'
