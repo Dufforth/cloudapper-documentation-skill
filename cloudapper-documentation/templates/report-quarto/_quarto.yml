@@ -1,0 +1,37 @@
+project:
+  render:
+    - Report.qmd
+
+author: "<author>"
+date: "<YYYY-MM-DD>"
+lang: en
+jupyter: python3
+filters:
+  - scripts/links.lua
+
+execute:
+  echo: false
+  warning: false
+
+format:
+  typst:
+    papersize: a4
+    margin:
+      x: 1.7cm
+      y: 1.8cm
+    mainfont: "Segoe UI"
+    fontsize: 10pt
+    toc: true
+    toc-depth: 2
+    section-numbering: "1.1"
+    fig-format: png
+    fig-dpi: 160
+  html:
+    embed-resources: true
+    toc: true
+    toc-location: left
+    toc-depth: 3
+    theme: default
+    fontsize: 0.95rem
+    fig-format: svg
+    css: styles.css

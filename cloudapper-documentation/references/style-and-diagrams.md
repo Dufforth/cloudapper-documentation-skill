@@ -39,6 +39,21 @@ Copy `templates/srs-quarto/` into the project's docs folder, fill `SRS.qmd` (sam
 - Tables: at most 5–6 columns; column widths follow the dash counts in the separator row.
 - Check the PDF text with `pdftotext -layout` instead of reading page images.
 
+### Polished reports (Quarto, on request)
+
+For analysis reports, test reports or reviews meant to be shared, copy `templates/report-quarto/` into the report folder and write `.qmd` files. One source gives a PDF (Typst engine), a single-file interactive HTML, and stays Confluence-compatible. Render with `quarto render` (Python cells need `jupyter`, `pandas`, `matplotlib`, `itables`, `tabulate`).
+- **Layout:** title block (product, environment, author, date) → one-page executive summary (score tiles with `charts.kpi_tiles`, an "In one sentence" callout, top issues) → details → appendix (method, test data).
+- **Severity colours** are fixed: critical red (`callout-important`), high orange (`callout-caution`), medium yellow (`callout-warning`), low (`callout-note`); the same colours in charts.
+- **Issue headings carry IDs** (`## BUG-01 · title {#bug-01}`) and every mention links to them; `scripts/links.lua` rewrites links to `.pdf` or `.html`.
+- **Screenshots:** annotate with numbered red boxes using `scripts/annotate.py` (coordinates in screenshot pixels), cropped to the issue, captioned "(1) …, (2) …".
+- **Charts:** `scripts/charts.py` (`kpi_tiles`, `journey_chart`, `grouped_scores`, `severity_chart`, `minutes_chart`, `md_table`).
+- **Confluence-compatible:** Markdown headings, pipe tables, images and callouts only; no raw HTML or Typst. Interactive pieces only when `charts.target_format() == "html"`, with a plain-table fallback.
+- Never use `--output-dir` inside a Quarto project for a test render (it moves the project's outputs).
+
+### Quick PDF without templates
+
+`python scripts/md2pdf.py <file.md>` converts plain Markdown with headless Chrome (Python `markdown` package; edit the Chrome path at the top of the script if Chrome is installed elsewhere). Use `md-to-pdf.js` when the document has Mermaid diagrams.
+
 ## Quality checklist before delivery
 
 - [ ] Sections 2 and 3 (technical guide) or section 1 (PM guide) make sense on their own.

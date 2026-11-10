@@ -18,7 +18,7 @@ This skill produces the documents a CloudApper solution needs across its life: *
 | **UAT test plan and test cases** | Testers, key users, PM | ISO/IEC/IEEE 29119-3 | `references/uat-test-documentation.md` | `templates/uat-test-cases-template.md` |
 | **Technical and troubleshooting guide** (as built) | Support analysts, solution engineers | ISO/IEC/IEEE 42010 views, 26514 user information | `references/technical-guide.md` | `templates/technical-guide-template.md` |
 | **PM handover guide**: business and project understanding | Project and account managers | ISO 21502 | `references/pm-handover-guide.md` | `templates/pm-guide-template.md` |
-| **Analysis report**: findings and priorities | Team leads, managers | ISO/IEC 25010 quality characteristics | `references/analysis-checklist.md` | `technical-guide.md` §8 |
+| **Analysis report**: findings and priorities | Team leads, managers | ISO/IEC 25010 quality characteristics | `references/analysis-checklist.md` | `technical-guide.md` §8, `templates/report-quarto/` (PDF/HTML) |
 
 ## Read before you start
 

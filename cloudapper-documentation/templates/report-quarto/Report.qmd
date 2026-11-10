@@ -1,0 +1,44 @@
+---
+title: "<Product or app name>"
+subtitle: "<Report type, e.g. UX test report>"
+---
+
+```{python}
+import sys
+sys.path.insert(0, "scripts")
+import charts as c
+```
+
+| | |
+|---|-------------|
+| **Environment** | <tenant / app / version> |
+| **Tested by** | <author> · <date> |
+| **Audience** | <who reads it> |
+
+# Executive summary
+
+```{python}
+#| fig-cap: "Headline results"
+c.kpi_tiles([("3.1 / 5", "UX score", "#f39c12"), ("4", "Critical bugs", "#c0392b")])
+```
+
+::: {.callout-note appearance="simple"}
+## In one sentence
+<The single most important conclusion.>
+:::
+
+::: {.callout-important}
+## Top issues
+1. <issue> ([BUG-01](Bug-List.qmd#bug-01))
+:::
+
+# Details
+
+## BUG-01 · <title> {#bug-01}
+
+::: {.callout-important}
+## Critical · <area>
+**Steps:** … **Expected:** … **Actual:** … **Impact:** … **Suggested fix:** …
+:::
+
+![<caption with numbered boxes (1), (2)>](fig/<figure>.jpg){width=90%}

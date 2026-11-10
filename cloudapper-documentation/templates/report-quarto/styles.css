@@ -1,0 +1,7 @@
+/* HTML-only polish; the PDF uses the Typst defaults plus _brand.yml. */
+h1.title { color: #0b3d91; }
+table { font-size: 0.86rem; }
+thead th { background: #0b3d91; color: #fff; }
+tbody tr:nth-child(even) td { background: #f5f8fc; }
+figure img { border: 1px solid #d5dce6; border-radius: 6px; }
+.quarto-figure figcaption { font-size: 0.82rem; color: #52606d; }

@@ -2,6 +2,12 @@
 
 CloudApper Documentation Skill. Newest first. Patch for added content, minor for structural changes.
 
+## v1.3.0 (2026-11-10)
+
+**Why:** Everything needed to produce documents comes with the skill, and a new user can install it from the README alone.
+
+**Added:** `templates/report-quarto/` (report layout for analysis and test reports: PDF and HTML, charts, annotated screenshots, link filter); `scripts/md2pdf.py` (plain Markdown to PDF); style guide sections for Quarto reports and quick PDFs; README installation guide (Git, Claude Code, Node, Playwright and Chromium, Playwright MCP, Quarto, Python packages, Poppler), checks and troubleshooting.
+
 ## v1.2.2 (2026-11-10)
 
 **Changed:** repository moved to `Dufforth/cloudapper-documentation-skill`; install and access instructions updated.
