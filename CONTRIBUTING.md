@@ -1,4 +1,4 @@
-# Contributing
+# Contributing to the CloudApper Documentation Skill
 
 This skill grows from real documentation and analysis work. Add what would help the next person understand or document a CloudApper solution, as **generic, verified knowledge**. Every change goes through a pull request and is merged only after the owner (Pablo Huanca) approves it.
 
@@ -26,7 +26,7 @@ This skill grows from real documentation and analysis work. Add what would help 
 
 ## How to propose a change
 
-1. Fork the repository on GitHub (once) and add it as a remote: `git remote add fork https://github.com/<your-user>/cloudapper-docs-skill.git`.
+1. Fork the repository on GitHub (once) and add it as a remote: `git remote add fork https://github.com/<your-user>/cloudapper-documentation-skill.git`.
 2. `git pull origin main`, then `git checkout -b add/<short-topic>`.
 3. Edit, commit with a clear message ("analysis-checklist: webhook workflows without secret check"), `git push fork <branch>`.
 4. Open a pull request into `main` and fill in the template. The automatic checks must pass.

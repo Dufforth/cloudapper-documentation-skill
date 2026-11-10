@@ -1,29 +1,33 @@
 # Change log
 
-Newest first. Patch for added knowledge, minor for structural changes.
+CloudApper Documentation Skill. Newest first. Patch for added content, minor for structural changes.
+
+## v1.2.0 (2026-11-10)
+
+**Why:** The repository is named CloudApper Documentation Skill and is dedicated to analysis and documentation.
+
+**Changed:** repository renamed to `cloudapper-documentation-skill`; README and change log rewritten around the documentation deliverables; skill title updated.
 
 ## v1.1.1 (2026-11-10)
 
-**Why:** The repository is a standalone analysis and documentation skill: no app-building, configuration or change guidance, and no dependency on other skills.
+**Why:** Keep every document focused on describing and analysing a solution as it is.
 
-**Changed:** technical guide section 7 now describes observed workflow dependencies instead of safe-change rules and "common adjustments"; findings recommend outcomes and owners, not build techniques; SKILL.md states the standalone scope; README, CONTRIBUTING and the pull request template no longer point to other repositories.
+**Changed:** technical guide section 7 describes the observed workflow dependencies; findings recommend the outcome needed and the owner; SKILL.md states the scope; README, CONTRIBUTING and the pull request template updated.
 
 ## v1.1.0 (2026-11-09)
 
-**Why:** Extend the skill from as-built documentation to the full document set of a CloudApper solution, each following a tailored ISO/IEC/IEEE standard: requirements for the team, test documents to accept the solution, and guides for SEs and PMs. Adds lessons from a Playwright vs Chrome DevTools MCP comparison on a test app.
+**Why:** Cover the full document set of a CloudApper solution, each document following a tailored ISO/IEC/IEEE standard: requirements for the team, test documents to accept the solution, and guides for solution engineers and PMs.
 
 **Added:**
-- `references/standards-map.md`: chosen standards (29148, 25010, 42010, 26514, 29119-3, 15289, 21502, 12207), document life cycle, tailoring decisions, standards not used.
+- `references/standards-map.md`: chosen standards (29148, 25010, 42010, 26514, 29119-3, 15289, 21502, 12207), document life cycle, tailoring decisions.
 - `references/document-control.md`: control block, versioning, IDs shared across documents.
-- `references/requirements-engineering.md`, `business-requirements.md`, `srs.md`, `uat-test-documentation.md`: process, requirement quality rules, MoSCoW and source confidence, acceptance criteria, traceability, change control, CloudApper questions, ISO 25010 checklist with CloudApper examples.
-- Templates: BRD, SRS (Markdown and Quarto PDF with non-functional and data sections), UAT plan and test cases.
-- Technical guide: 42010 architecture views; PM guide: 21502 mapping; read-only analysis: browser tool lessons.
+- `references/requirements-engineering.md`, `business-requirements.md`, `srs.md`, `uat-test-documentation.md`: process, requirement quality rules, priority and source confidence, acceptance criteria, traceability, change control, elicitation questions, ISO 25010 quality checklist.
+- Templates: BRD, SRS (Markdown and PDF layout with non-functional and data sections), UAT plan and test cases.
+- Technical guide: ISO/IEC/IEEE 42010 architecture views; PM guide: ISO 21502 mapping; read-only analysis: walkthrough and screenshot practices.
 - Manager guide 1.1: full document set, standards table, requirements process.
-
-**Files:** SKILL.md (rewritten for the wider scope), README.md, docs/CloudApper-Documentation-Method.md, 6 new references, 4 new templates.
 
 ## v1.0.0 (2026-11-09)
 
-**Why:** A separate skill for understanding, analysing and documenting CloudApper solutions, shareable with managers and analysts without the app-building knowledge.
+**Why:** A skill for understanding, analysing and documenting CloudApper solutions, shareable with solution engineers, analysts and managers.
 
-**Added:** `cloudapper-solution-docs` skill (rules, process, deliverables), references for reading an app, read-only analysis, technical guide, PM handover guide, analysis checklist, style and diagrams; templates for both guides; Markdown-to-PDF script; documentation method for managers in `docs/`.
+**Added:** `cloudapper-solution-docs` skill (rules, process, deliverables); references for reading an app, read-only analysis, technical guide, PM handover guide, analysis checklist, style and diagrams; templates for both guides; Markdown-to-PDF script; documentation method for managers in `docs/`.
