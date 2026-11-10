@@ -14,13 +14,13 @@ A Claude Code skill for **analysing and documenting CloudApper solutions**: busi
 | Analysis report | Team leads, managers | ISO/IEC 25010:2023 |
 | Document control on all of them | Everyone | ISO/IEC/IEEE 15289:2019 |
 
-Why these standards and how they are tailored: `cloudapper-solution-docs/references/standards-map.md`.
+Why these standards and how they are tailored: `cloudapper-documentation/references/standards-map.md`.
 
 ## What is inside
 
 | Path | What |
 |---|---|
-| `cloudapper-solution-docs/SKILL.md` | Entry point: deliverables, rules, process |
+| `cloudapper-documentation/SKILL.md` | Entry point: deliverables, rules, process |
 | `…/references/standards-map.md` | Chosen standards, document life cycle, tailoring |
 | `…/references/document-control.md` | Control block, versioning, cross-document IDs |
 | `…/references/requirements-engineering.md` | Elicitation, requirement quality rules, priority, acceptance criteria, traceability, change control |
@@ -48,12 +48,12 @@ git clone https://github.com/Cloudapper-SDE/cloudapper-documentation-skill.git ~
 Then make the skill folder visible to Claude Code, either by linking it (Windows PowerShell, no admin needed):
 
 ```powershell
-New-Item -ItemType Junction -Path "$env:USERPROFILE\.claude\skills\cloudapper-solution-docs" -Target "$env:USERPROFILE\cloudapper-documentation-skill\cloudapper-solution-docs"
+New-Item -ItemType Junction -Path "$env:USERPROFILE\.claude\skills\cloudapper-documentation" -Target "$env:USERPROFILE\cloudapper-documentation-skill\cloudapper-documentation"
 ```
 
-(macOS/Linux: `ln -s ~/cloudapper-documentation-skill/cloudapper-solution-docs ~/.claude/skills/cloudapper-solution-docs`)
+(macOS/Linux: `ln -s ~/cloudapper-documentation-skill/cloudapper-documentation ~/.claude/skills/cloudapper-documentation`)
 
-or by copying `cloudapper-solution-docs/` into `~/.claude/skills/` (then copy again after each `git pull`). If `~/.claude/skills` is itself a git repository, add `/cloudapper-solution-docs/` to its `.gitignore`.
+or by copying `cloudapper-documentation/` into `~/.claude/skills/` (then copy again after each `git pull`). If `~/.claude/skills` is itself a git repository, add `/cloudapper-documentation/` to its `.gitignore`.
 
 Start a new Claude Code session and ask, for example:
 - *"Write a BRD and an SRS for {project} from these session notes."*

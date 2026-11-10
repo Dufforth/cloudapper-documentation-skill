@@ -32,4 +32,4 @@ This skill grows from real documentation and analysis work. Add what would help 
 4. Open a pull request into `main` and fill in the template. The automatic checks must pass.
 5. The owner reviews and merges.
 
-With Claude Code you can say: *"Add this lesson to the cloudapper-solution-docs skill on a new branch and open a pull request from my fork."*
+With Claude Code you can say: *"Add this lesson to the cloudapper-documentation skill on a new branch and open a pull request from my fork."*

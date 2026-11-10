@@ -2,6 +2,10 @@
 
 CloudApper Documentation Skill. Newest first. Patch for added content, minor for structural changes.
 
+## v1.2.1 (2026-11-10)
+
+**Changed:** skill folder and skill name renamed to `cloudapper-documentation`, matching the repository name; install instructions updated.
+
 ## v1.2.0 (2026-11-10)
 
 **Why:** The repository is named CloudApper Documentation Skill and is dedicated to analysis and documentation.
@@ -30,4 +34,4 @@ CloudApper Documentation Skill. Newest first. Patch for added content, minor for
 
 **Why:** A skill for understanding, analysing and documenting CloudApper solutions, shareable with solution engineers, analysts and managers.
 
-**Added:** `cloudapper-solution-docs` skill (rules, process, deliverables); references for reading an app, read-only analysis, technical guide, PM handover guide, analysis checklist, style and diagrams; templates for both guides; Markdown-to-PDF script; documentation method for managers in `docs/`.
+**Added:** `cloudapper-documentation` skill (rules, process, deliverables); references for reading an app, read-only analysis, technical guide, PM handover guide, analysis checklist, style and diagrams; templates for both guides; Markdown-to-PDF script; documentation method for managers in `docs/`.
