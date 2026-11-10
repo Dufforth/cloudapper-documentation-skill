@@ -1,10 +1,10 @@
 ## What this adds
 
-<!-- One or two sentences: the lesson, pattern or fix. -->
+<!-- One or two sentences: what this adds to the documentation or analysis method. -->
 
 ## Where
 
-<!-- Skill and file(s), e.g. cloudapper/references/workflow-patterns.md §1 -->
+<!-- File(s), e.g. cloudapper-solution-docs/references/analysis-checklist.md -->
 
 ## Evidence
 

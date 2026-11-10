@@ -2,7 +2,7 @@
 
 A Claude Code skill for **documenting CloudApper solutions across their life cycle**: business requirements, software requirements (SRS), UAT test documentation, technical and troubleshooting guides for solution engineers, PM handover guides for business and project understanding, and analysis reports of existing apps. Each document follows the structure of an ISO/IEC/IEEE standard, tailored for no-code business solutions. Owner and approver: Pablo Huanca.
 
-This repository deliberately contains **no app-building knowledge** (designing forms, writing workflows, integration build patterns, write APIs). App building lives in the separate `cloudapper-skills` repository.
+This is a standalone repository and skill for **analysis and documentation only**. It contains no knowledge for building, configuring or changing apps (no form design, workflow construction, integration build patterns or write APIs), and it does not depend on any other skill.
 
 ## Documents and standards
 

@@ -51,10 +51,10 @@ One subsection per workflow stage: trigger, numbered steps, hard-coded values, e
 ### 7. Core workflow reference
 Only the workflows that carry the business logic (no generic syncs, tests or inactive ones).
 - Index table: workflow | role | trigger | position in the list.
-- **7.1 Before anyone changes anything:** where workflows live, node types table, the platform behaviours that make changes risky (order in the list, status triggers, Before vs After, test in UAT first, copy the workflow before editing, lists duplicated across workflows).
-- One subsection per core workflow: purpose, trigger, variables and hard-coded lists in full, node-by-node table (order | designer node name | type | what it does), routing conditions table, fields written, things to know (failure behaviour, dead branches such as `1 = 0`, re-run effects, edge cases). Add a diagram where the execution order is not obvious.
-- Common adjustments: change request → workflow › node → what would need to change (description only; the change itself is for the solution engineering team).
-- Use exact designer node names. Mark anything inferred. Values cut off in the export get "…" and a pointer to the node.
+- **7.1 How to read this section:** where workflows are listed, the node types table (`reading-a-cloudapper-app.md` §7), and the dependencies between the documented workflows as observed: which workflow starts which, through which status or record, and in which list order; lists or values that appear in more than one workflow.
+- One subsection per core workflow: purpose, trigger, variables and hard-coded lists in full, node-by-node table (order | node name | type | what it does), routing conditions table, fields written, things to know (failure behaviour, dead branches such as `1 = 0`, effect of a rerun, edge cases). Add a diagram where the execution order is not obvious.
+- Use exact node names as shown in the app. Mark anything inferred. Values cut off in the export get "…" and a pointer to the node.
+- This section describes the solution as it is. It gives no instructions for changing it; questions about changes go to the solution owner.
 
 ### 8. Findings and recommendations
 Table: # (F-01…) | severity (🔴 high, 🟠 medium, 🟡 low) | finding | evidence | recommendation. Then a suggested priority list (now / next / later). Use `analysis-checklist.md`.

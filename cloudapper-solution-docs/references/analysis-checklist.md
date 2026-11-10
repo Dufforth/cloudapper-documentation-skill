@@ -1,5 +1,7 @@
 # Analysis checklist (findings)
 
+Recommendations state the outcome needed and who should act ("credentials moved to the credentials store and rotated; owner: solution team"), never how to build it.
+
 Use this to write the findings section (F-01…, severity, evidence, recommendation). Each item has come up in real production apps. Review read-only: describe the risk and the direction of the fix; the fix itself is for the solution engineering team.
 
 Severity: 🔴 **high**: security exposure, data loss or wrong results reaching users or payroll. 🟠 **medium**: failures that need manual work, performance, environment mix-ups. 🟡 **low**: housekeeping, naming, documentation gaps.

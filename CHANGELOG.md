@@ -2,6 +2,12 @@
 
 Newest first. Patch for added knowledge, minor for structural changes.
 
+## v1.1.1 (2026-11-10)
+
+**Why:** The repository is a standalone analysis and documentation skill: no app-building, configuration or change guidance, and no dependency on other skills.
+
+**Changed:** technical guide section 7 now describes observed workflow dependencies instead of safe-change rules and "common adjustments"; findings recommend outcomes and owners, not build techniques; SKILL.md states the standalone scope; README, CONTRIBUTING and the pull request template no longer point to other repositories.
+
 ## v1.1.0 (2026-11-09)
 
 **Why:** Extend the skill from as-built documentation to the full document set of a CloudApper solution, each following a tailored ISO/IEC/IEEE standard: requirements for the team, test documents to accept the solution, and guides for SEs and PMs. Adds lessons from a Playwright vs Chrome DevTools MCP comparison on a test app.

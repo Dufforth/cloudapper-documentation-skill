@@ -8,10 +8,11 @@ This skill grows from real documentation and analysis work. Add what would help 
 - Behaviours that confuse readers and how to explain them in troubleshooting sections.
 - New risks for `analysis-checklist.md`, with severity guidance.
 - Better document structures, templates, diagram tips, quality checks.
+- Requirements practice: elicitation questions, well-written requirement and acceptance-criteria examples, traceability and UAT patterns.
 
 ## What does not belong here
 
-- How to build or change apps (forms, workflow construction, write APIs, integration design): that goes to the `cloudapper-skills` repository.
+- How to build, configure or change apps (forms, workflow construction, write APIs, integration design). This repository covers analysis and documentation only.
 - Client IDs, app IDs, customer or employee names, customer business rules, record data.
 - Credentials of any kind.
 - Project status or meeting notes.

@@ -107,8 +107,8 @@ Trigger: … Steps: 1. … Hard-coded values: … External calls: … Status wri
 | Workflow | Role | Trigger | Position |
 |---|---|---|---|
 
-### 7.1 Before anyone changes anything
-{Order in the list, status triggers, Before vs After, UAT first, copy before editing.}
+### 7.1 How to read this section
+{Where workflows are listed, node types, and the observed dependencies: which workflow starts which, through which status, in which list order.}
 
 ### 7.2 {Workflow name}
 

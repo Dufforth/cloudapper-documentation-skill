@@ -5,7 +5,9 @@ description: Documentation and analysis for CloudApper solutions (apps on web.cl
 
 # CloudApper solution documentation and analysis
 
-This skill produces the documents a CloudApper solution needs across its life: **requirements before the build, test documents to accept it, and as-built guides to support and hand it over**, plus analysis of existing apps. Each document follows the structure and quality rules of an ISO/IEC/IEEE standard, tailored for no-code business solutions (`references/standards-map.md`). Building and changing apps is out of scope.
+This skill produces the documents a CloudApper solution needs across its life: **requirements before the build, test documents to accept it, and as-built guides to support and hand it over**, plus analysis of existing apps. Each document follows the structure and quality rules of an ISO/IEC/IEEE standard, tailored for no-code business solutions (`references/standards-map.md`).
+
+**Scope: analysis and documentation only.** This skill is standalone: it needs no other skill, and it contains nothing about building, configuring or changing apps. When a task needs a change to an app, say so and leave it to the solution owner.
 
 ## Deliverables
 

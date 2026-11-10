@@ -28,7 +28,7 @@ CloudApper solutions are small-to-medium no-code business apps delivered by a so
 flowchart TB
   D[Discovery sessions, tickets, existing apps] --> BRD[Business Requirements Document<br/>29148 BRS/StRS]
   BRD --> SRS[Software Requirements Specification<br/>29148 SRS + 25010 quality]
-  SRS --> BUILD[Build in CloudApper<br/>outside this skill]
+  SRS --> BUILD[Solution delivery<br/>not covered by this skill]
   SRS --> UAT[UAT test plan and cases<br/>29119-3]
   BUILD --> UAT
   UAT --> TG[Technical and troubleshooting guide<br/>42010 views + 26514 user guide]
