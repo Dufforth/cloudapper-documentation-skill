@@ -161,4 +161,4 @@ Start a new Claude Code session and ask, for example:
 
 ## Contributing
 
-See `CONTRIBUTING.md`: fork, branch, pull request; merged only after the owner approves. To get access, ask Pablo to add you as a collaborator (read access) on `Dufforth/cloudapper-documentation-skill`.
+The repository is public: anyone can clone and use it. To propose a change, see `CONTRIBUTING.md`: fork, branch, pull request; merged only after the owner approves.

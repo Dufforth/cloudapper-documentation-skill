@@ -2,6 +2,10 @@
 
 CloudApper Documentation Skill. Newest first. Patch for added content, minor for structural changes.
 
+## v1.3.1 (2026-11-10)
+
+**Changed:** repository is public; README contributing note updated (no access request needed to use it).
+
 ## v1.3.0 (2026-11-10)
 
 **Why:** Everything needed to produce documents comes with the skill, and a new user can install it from the README alone.
