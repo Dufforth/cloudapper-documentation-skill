@@ -2,6 +2,10 @@
 
 CloudApper Documentation Skill. Newest first. Patch for added content, minor for structural changes.
 
+## v1.2.2 (2026-11-10)
+
+**Changed:** repository moved to `Dufforth/cloudapper-documentation-skill`; install and access instructions updated.
+
 ## v1.2.1 (2026-11-10)
 
 **Changed:** skill folder and skill name renamed to `cloudapper-documentation`, matching the repository name; install instructions updated.

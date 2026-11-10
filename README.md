@@ -42,7 +42,7 @@ Why these standards and how they are tailored: `cloudapper-documentation/referen
 Skills are read from `~/.claude/skills/` (Windows: `C:\Users\<you>\.claude\skills\`).
 
 ```bash
-git clone https://github.com/Cloudapper-SDE/cloudapper-documentation-skill.git ~/cloudapper-documentation-skill
+git clone https://github.com/Dufforth/cloudapper-documentation-skill.git ~/cloudapper-documentation-skill
 ```
 
 Then make the skill folder visible to Claude Code, either by linking it (Windows PowerShell, no admin needed):
@@ -67,4 +67,4 @@ Start a new Claude Code session and ask, for example:
 
 ## Contributing
 
-See `CONTRIBUTING.md`: fork, branch, pull request; merged only after the owner approves. To get access, ask Pablo to add you to the **Cloudapper-SDE** organization.
+See `CONTRIBUTING.md`: fork, branch, pull request; merged only after the owner approves. To get access, ask Pablo to add you as a collaborator (read access) on `Dufforth/cloudapper-documentation-skill`.
