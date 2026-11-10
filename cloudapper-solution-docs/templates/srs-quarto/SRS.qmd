@@ -1,0 +1,124 @@
+---
+title: "<Customer – Project>"
+---
+
+<!-- Software Requirements Specification skeleton (ISO/IEC/IEEE 29148 structure).
+     page-style.typ adds the running header/footer ("Page x of y"), navy headings and zebra tables;
+     because it sets the page inside the body, page 1 = title + contents, body starts on page 2.
+     Column widths: dash counts in each separator row. Keep requirement tables at 5 columns. -->
+
+# Document control
+
+| Field | Value |
+|------------|--------------------------------------------------|
+| Document ID | <DOC-ID> |
+| Version / status | 0.1 · Draft for review |
+| Author | <author, role> |
+| Customer | <customer / project> |
+| Classification | Internal – not for external distribution |
+| Basis | <requirements sessions / sources> |
+
+**Revision history**
+
+| Version | Date | Author | Change |
+|------|----------|------------|----------------------------------|
+| 0.1 | <date> | <author> | First draft |
+
+**Review and approval**
+
+| Role | Name | Decision | Date |
+|------------------|------------------|------------|----------|
+| Customer owner | | | |
+| CloudApper Project Manager | | | |
+
+# Introduction
+
+## Purpose
+## Scope
+## Definitions and acronyms
+
+**Requirement priority (MoSCoW):** **M** must · **S** should · **C** could · **W** won't (this release).
+**Source confidence:** *Stated* by the customer, *Proposed* by CloudApper and not rejected, *Inferred*.
+
+## References
+
+| Ref | Document / session |
+|------|--------------------------------------------------------|
+| R1 | <session, date> |
+
+# Overall description
+
+## Product perspective
+<!-- Context diagram as Mermaid (never ASCII art in a code block). Only users, the app and external systems. -->
+
+```{mermaid}
+%%| label: fig-context
+%%| fig-cap: "System context"
+%%| fig-width: 4.3
+%%{init: {"theme": "base", "themeVariables": {"fontFamily": "Segoe UI", "fontSize": "15px", "primaryColor": "#eef2f9", "primaryBorderColor": "#0b3d91", "primaryTextColor": "#1f2933", "lineColor": "#0b3d91", "clusterBkg": "#fafbfd", "clusterBorder": "#d6dce5", "edgeLabelBackground": "#ffffff"}}}%%
+flowchart TB
+  USER([Business user])
+  subgraph CA[CloudApper app]
+    UI[Runtime / tablet]
+    LOGIC[Rules and workflows]
+  end
+  EXT[(External system of record)]
+  USER -- "what they do" --> UI --> LOGIC
+  EXT -- "data in (sync)" --> LOGIC
+  LOGIC -- "data out" --> EXT
+```
+## Business context
+## User classes
+## Operating environment
+## Constraints
+<!-- CON-n -->
+## Assumptions and dependencies
+<!-- AS-n, DEP-n -->
+
+# Functional requirements
+
+## <Feature area>
+
+| ID | Requirement | Pri | Src | Acceptance criteria |
+|------|------------------------------------|---|------------|------------------------------|
+| FR-01 | The system shall … | M | R1 · Stated | <observable, testable outcome> |
+
+# External interface requirements
+
+| ID | Interface requirement | Direction |
+|------|------------------------------------------------------|----------|
+| IF-01 | <data / call> | <A → B> |
+
+# Non-functional requirements
+
+<!-- ISO/IEC 25010:2023 characteristics; only those that matter, each with a measurable target. -->
+
+| ID | Characteristic | Requirement | Target | Pri |
+|------|----------------|------------------------------|--------------|---|
+| NFR-01 | Performance efficiency | <requirement> | <number> | M |
+
+# Data requirements
+
+| ID | Record type | Unique key | Source of truth | Retention |
+|------|----------------|--------------|----------------|----------|
+| DR-01 | <record> | <key> | <system> | <period> |
+
+# Out of scope
+
+| Item | Reason |
+|------------------------------------------|------------------------------------------|
+
+# Open issues
+
+| ID | Question | Why it matters / what for | Owner |
+|------|------------------------------|------------------------------|----------|
+
+# Traceability matrix
+
+| Feature | Requirements | Interfaces | Open issues | Sources |
+|--------------|------------------|----------|----------|----------|
+
+# Next steps
+
+| Action | Owner | Target |
+|------------------------------------------|------------------|----------|

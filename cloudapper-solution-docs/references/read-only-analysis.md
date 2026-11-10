@@ -65,6 +65,17 @@ Workflow fields worth knowing: `Status` 1 = active, 2 = inactive; `TriggerType` 
 
 Useful App Studio screenshots for the appendix: the workflow list (order and on/off state) and the designer view of the most complex workflow.
 
+Lessons from a tool comparison on a test app (2026-11-09):
+- **Browser tool:** the Playwright MCP worked best: one page script can navigate, wait, blur and save a whole batch of screenshots straight to the output folder, and it works with the window in the background. Chrome DevTools MCP needed about 2.5 × more calls, returned every screenshot into the conversation, timed out on screenshots while the window was in the background, and cannot click by position.
+- **Batch screenshots** from a script that saves to disk; look at a sample instead of every image.
+- **Direct list URLs** (`/list/<formId>/<menuId>`) are more reliable than clicking menus; dropdown menu entries often do not navigate when clicked by a tool.
+- **Workflow list:** switch App Studio's workflow page to **List View** before the screenshot. The default overview diagram is unreadable at page width.
+- **Record details** open through the row's Details icon; clicking a cell only selects it. An open side panel can block the top menu: navigate to the list URL again instead of pressing Escape.
+- **Blur** by walking text nodes (not only leaf elements, or values inside elements with children stay readable) and blur the header avatar by position.
+- **Loading checks** must also wait for page-specific overlays (for example "Loading Reports" on the Report page), which can appear after the general loading check passes.
+- **Audit side effect:** opening a record adds a "viewed record" entry to its Audit Log. It changes no data, but mention it when calling a walkthrough read-only.
+- **Confirm the app by its header and URL,** not by values the browser keeps from earlier sessions (a stored "current app" can name another app).
+
 ## 5. Personal data and secrets
 
 - Blur names, emails, person IDs, phone numbers and IPs in screenshots. Do not copy record data into documents beyond counts and anonymised examples.

@@ -5,11 +5,11 @@
 | Audience | Managers, team leads, project and account managers |
 | Author | Pablo Huanca |
 | Date | 2026-11-09 |
-| Version | 1.0 |
+| Version | 1.1 |
 
 ## In one sentence
 
-Every CloudApper solution we support should have a short, current set of documents that let a new person understand it in one page, start troubleshooting within minutes, and see its risks. This guide explains what those documents are, how they are produced without touching the live app, and what quality to expect.
+Every CloudApper solution should have a short, current set of documents, from the business need to the as-built system: agreed requirements before the build, tests that prove them, and guides that let a new person understand the solution in one page, troubleshoot it within minutes and see its risks. This guide explains those documents, the international standards they follow, how they are produced without touching the live app, and what quality to expect.
 
 ## 1. Why documentation matters
 
@@ -23,12 +23,32 @@ Every CloudApper solution we support should have a short, current set of documen
 
 ## 2. The deliverables
 
-| Document | For | Answers | Typical length |
-|---|---|---|---|
-| **Solution summary** | Managers, new team members | What is it for, how does it work on one page | 1–2 pages |
-| **Technical and troubleshooting guide** | Support analysts, solution engineers | How it works, what to do when it breaks, what each core workflow does | 15–40 pages |
-| **PM handover guide** | Project and account managers | Customer, value, how it works in plain words, people, risks, communication | 10–20 pages |
-| **Analysis report** | Managers, team leads | What state the solution is in, what to fix first | 3–6 pages |
+| Document | When | For | Answers | Typical length |
+|---|---|---|---|---|
+| **Business Requirements Document (BRD)** | Before design | PM, customer owner, team | Why the solution exists, objectives, stakeholders, business rules, scope | 8–15 pages |
+| **Software Requirements Specification (SRS)** | Before build | Solution engineers, testers, PM | What the solution shall do and how well: functional, quality, interface and data requirements with acceptance criteria | 10–30 pages |
+| **UAT test plan and test cases** | Before go-live | Testers, customer key users, PM | How each requirement is proven, and whether the solution is ready | 5–20 pages |
+| **Technical and troubleshooting guide** | After go-live (as built) | Support analysts, solution engineers | How it works, what to do when it breaks, what each core workflow does | 15–40 pages |
+| **PM handover guide** | At handover | Project and account managers | Customer, value, how it works in plain words, people, risks, communication | 10–20 pages |
+| **Solution summary** | Any time | Managers, new team members | What is it for, how does it work on one page | 1–2 pages |
+| **Analysis report** | Reviews, audits | Managers, team leads | What state the solution is in, what to fix first | 3–6 pages |
+
+Requirement, test and finding IDs are shared across documents, so one business need can be followed to the requirement, the test that proves it and the part of the solution that delivers it.
+
+## 2a. Standards behind the documents
+
+Each document follows the structure and quality rules of an international standard, tailored for no-code business solutions. The documents follow these structures; they do not claim certification.
+
+| Document | Standard | What it brings |
+|---|---|---|
+| BRD and SRS | ISO/IEC/IEEE 29148:2018 Requirements engineering | Standard sections, characteristics of a good requirement (necessary, unambiguous, verifiable…), traceability |
+| SRS quality requirements, analysis findings | ISO/IEC 25010:2023 Product quality model | A checklist of nine quality characteristics (performance, reliability, security, maintainability…) |
+| UAT documents | ISO/IEC/IEEE 29119-3:2021 Test documentation | Test plan, test cases, completion summary with go/no-go |
+| Technical guide | ISO/IEC/IEEE 42010:2022 Architecture description; 26514:2022 Information for users | Views per reader (context, data, process, integration, environment); task-based user guide |
+| PM handover guide | ISO 21502:2020 Project management | Business case, stakeholders, scope, risks, issues, handover |
+| All documents | ISO/IEC/IEEE 15289:2019 Life-cycle information items | Document ID, version, status, approvals, revision history |
+
+What was tailored out, and why: a separate system requirements document (the platform is fixed), formal architecture languages, and organisation-level governance. Requirements and UAT documents are approved by the customer owner and the PM; an approved requirement changes only through a change request.
 
 All documents are internal. They are written in Markdown, so they can be read anywhere, versioned and moved to Confluence; a PDF is produced when someone asks for one.
 
@@ -46,7 +66,22 @@ All documents are internal. They are written in Markdown, so they can be read an
 
 Sections 2 and 3 are written to work on their own: a reader who opens nothing else can still understand the app and start an investigation.
 
-## 3. How a document is produced
+## 3. How requirements are produced (new solutions)
+
+```mermaid
+flowchart TB
+  F[1. Frame: problem, sponsor, users, systems] --> E[2. Elicit: sessions, current files, examples with numbers]
+  E --> B[3. BRD: objectives, stakeholders, business rules, scope]
+  B --> S[4. SRS: requirements with acceptance criteria]
+  S --> V[5. Review with customer, engineer, tester]
+  V --> A[6. Approve: version 1.0 baseline]
+  A --> U[7. UAT plan and test cases]
+  A --> C[Change requests update versions and traceability]
+```
+
+A good requirement is written as "The system shall …", states one observable behaviour with its condition and limit, has a priority (must, should, could, won't), names its source, and comes with acceptance criteria that a tester can pass or fail.
+
+## 3a. How an existing solution is documented
 
 ```mermaid
 flowchart TB
@@ -109,7 +144,7 @@ A finished document:
 Send the team lead:
 
 1. The customer and the app name, and which environment should be read.
-2. The document type (section 2) and who will read it.
+2. The document type (section 2) and who will read it. For requirements: the session notes, current spreadsheets or forms, and who approves.
 3. Who can sign in to the app for the walkthrough.
 4. Any existing documents, tickets or notes.
 5. The date it is needed.

@@ -6,7 +6,21 @@ Skeleton: `templates/technical-guide-template.md`.
 
 ## Header block (under the title)
 
-Platform and tenant, environment read, integration targets, author, date documented, "read-only walkthrough", and a note that personal data in screenshots is blurred.
+The document control block (`document-control.md`, type TG) plus: platform and tenant, environment read, integration targets, "read-only walkthrough", and a note that personal data in screenshots is blurred. Standard line: "Architecture views based on ISO/IEC/IEEE 42010:2022, user information on ISO/IEC/IEEE 26514:2022, tailored for CloudApper solutions."
+
+## Architecture views (ISO/IEC/IEEE 42010, tailored)
+
+Section 4 opens with a stakeholders and concerns table (stakeholder | concern | answered in), then five views. Each view answers the concerns of named readers.
+
+| View | Answers | Shown as |
+|---|---|---|
+| Context | Who uses the app, which systems it talks to | Context flowchart (users, app, external systems) |
+| Data | Which record types exist, how they relate, which system owns each | ER diagram, forms table with source of truth |
+| Process | How a record moves through statuses and which workflow moves it | Flow-in-N-steps table, `stateDiagram-v2`, sequence diagram |
+| Integration | What is exchanged with each external system, when, how it fails | Endpoints table, schedules, error behaviour |
+| Environment | UAT and Production apps, external tenants, differences between them | Environment table |
+
+If the solution has an SRS, link each core workflow to the requirement IDs it delivers (traceability column "Delivered by").
 
 ## Structure
 

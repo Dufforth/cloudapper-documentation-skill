@@ -31,6 +31,14 @@ node <skill folder>/scripts/md-to-pdf.js docs/<App>-Documentation.md docs/<App>-
 - If `require('playwright')` fails, set `PW_PATH` to an installed playwright package. If a browser build is missing, set `CHROME_EXE` to an installed headless Chrome.
 - Expect `0 broken` images, `error: none`, and as many diagrams as Mermaid blocks.
 
+### Polished SRS PDF (Quarto, on request)
+
+Copy `templates/srs-quarto/` into the project's docs folder, fill `SRS.qmd` (same sections as `srs-template.md`), set title, author and date in `_quarto.yml`, then run `quarto render` in that folder (Typst engine, no Python needed). `page-style.typ` adds a running header and footer with "Page x of y", navy headings and zebra tables; page 1 holds the title and contents.
+- Diagrams as `{mermaid}` cells, `flowchart TB`, `%%| fig-width: 4.3` and a `fig-cap`; keep the `%%{init}%%` theme line (without it edge labels get a coloured background).
+- Never write placeholders as `<…>` in finished Typst content: Typst reads them as labels.
+- Tables: at most 5–6 columns; column widths follow the dash counts in the separator row.
+- Check the PDF text with `pdftotext -layout` instead of reading page images.
+
 ## Quality checklist before delivery
 
 - [ ] Sections 2 and 3 (technical guide) or section 1 (PM guide) make sense on their own.

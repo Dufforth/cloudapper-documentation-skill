@@ -4,9 +4,11 @@ Written for the project or account manager taking over a customer solution: non-
 
 Skeleton: `templates/pm-guide-template.md`.
 
+Standard line: "Structure based on ISO 21502:2020 project management guidance, tailored for CloudApper solutions." The 21502 subjects map to the sections: business case and benefits (§1, §3), stakeholders (§9), scope (§5), risks and issues (§10), communication (§11), handover (§12).
+
 ## Header
 
-Audience, solution and tenant, as-of date, sources (ticket system read-only, the app, public information), link to the technical guide, and the **[confirm]** marker for anything not verified.
+The document control block (`document-control.md`, type PMG), then audience, solution and tenant, as-of date, sources (ticket system read-only, the app, public information), link to the technical guide, and the **[confirm]** marker for anything not verified.
 
 ## Structure
 

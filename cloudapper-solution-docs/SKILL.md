@@ -1,59 +1,59 @@
 ---
 name: cloudapper-solution-docs
-description: Understand, analyse and document an existing CloudApper solution (an app on web.cloudapper.com, m2sys.cloudapper.com or another tenant) without changing it - read-only walkthrough, reading forms, menus, roles, workflows, connectors and reports, explaining how the solution works, finding risks, and writing a technical and troubleshooting guide, a PM handover guide or an analysis report in Markdown (PDF on request). Use when asked to document, explain, analyse, review, audit, hand over or write a troubleshooting guide for a CloudApper app or solution, or when someone needs to understand what a CloudApper app does. This skill is for understanding and documenting only; it does not cover building or changing apps.
+description: Documentation and analysis for CloudApper solutions (apps on web.cloudapper.com, m2sys.cloudapper.com or another tenant), following ISO-based engineering documentation practice - Business Requirements Documents (ISO/IEC/IEEE 29148), Software Requirements Specifications with functional, non-functional (ISO/IEC 25010), interface and data requirements, UAT test plans and test cases (ISO/IEC/IEEE 29119-3), technical and troubleshooting guides for solution engineers (ISO/IEC/IEEE 42010 views), PM handover guides for business and project understanding (ISO 21502), and analysis reports with findings from a read-only review of an existing app. Use when asked to write requirements, an SRS, functional requirements, a BRD, UAT test cases, or to document, explain, analyse, review, audit or hand over a CloudApper app or solution. Markdown by default, PDF on request. It does not cover building or changing apps.
 ---
 
 # CloudApper solution documentation and analysis
 
-This skill helps a reader **understand an existing CloudApper solution and write it down** so that others can support it, hand it over or decide what to improve. It never changes the app. Building and changing apps is out of scope.
+This skill produces the documents a CloudApper solution needs across its life: **requirements before the build, test documents to accept it, and as-built guides to support and hand it over**, plus analysis of existing apps. Each document follows the structure and quality rules of an ISO/IEC/IEEE standard, tailored for no-code business solutions (`references/standards-map.md`). Building and changing apps is out of scope.
 
-## What you can produce
+## Deliverables
 
-| Deliverable | Reader | Guide |
-|---|---|---|
-| **Technical and troubleshooting guide** | Support analysts, solution engineers | `references/technical-guide.md` |
-| **PM handover guide** | Project managers, account managers | `references/pm-handover-guide.md` |
-| **Analysis report** (findings and recommendations only) | Team leads, managers | `references/analysis-checklist.md` + `references/technical-guide.md` §8 |
-| **Solution summary** (one page) | Managers, new team members | `references/technical-guide.md` §1–2 only |
-
-Ready-to-fill skeletons are in `templates/`.
+| Deliverable | Reader | Standard | Guide | Template |
+|---|---|---|---|---|
+| **Business Requirements Document (BRD)**: why and what the business needs | PM, customer owner, team | ISO/IEC/IEEE 29148 (BRS/StRS) | `references/business-requirements.md` | `templates/brd-template.md` |
+| **Software Requirements Specification (SRS)**: functional, quality, interface, data requirements | Solution engineers, testers, PM | 29148 SRS + ISO/IEC 25010 | `references/srs.md` | `templates/srs-template.md`, `templates/srs-quarto/` (PDF) |
+| **UAT test plan and test cases** | Testers, key users, PM | ISO/IEC/IEEE 29119-3 | `references/uat-test-documentation.md` | `templates/uat-test-cases-template.md` |
+| **Technical and troubleshooting guide** (as built) | Support analysts, solution engineers | ISO/IEC/IEEE 42010 views, 26514 user information | `references/technical-guide.md` | `templates/technical-guide-template.md` |
+| **PM handover guide**: business and project understanding | Project and account managers | ISO 21502 | `references/pm-handover-guide.md` | `templates/pm-guide-template.md` |
+| **Analysis report**: findings and priorities | Team leads, managers | ISO/IEC 25010 quality characteristics | `references/analysis-checklist.md` | `technical-guide.md` §8 |
 
 ## Read before you start
 
 | Task | Read |
 |---|---|
-| Understand CloudApper concepts (forms, workflows, triggers, connectors, roles, reports) well enough to explain an app | `references/reading-a-cloudapper-app.md` |
-| Get access and collect facts without changing anything (walkthrough, APIs, screenshots, personal data, secrets) | `references/read-only-analysis.md` |
-| Write the technical and troubleshooting guide | `references/technical-guide.md` |
-| Write the PM handover guide | `references/pm-handover-guide.md` |
-| Find risks and write findings (F-01…) | `references/analysis-checklist.md` |
-| Diagrams, writing style, quality check before delivery | `references/style-and-diagrams.md` |
+| Choose the right document and standard; tailoring decisions | `references/standards-map.md` |
+| Document control block, versions, IDs used across documents | `references/document-control.md` |
+| Gather, write, check, trace and change requirements | `references/requirements-engineering.md` |
+| Understand CloudApper concepts well enough to explain or specify a solution | `references/reading-a-cloudapper-app.md` |
+| Collect facts from an existing app without changing it | `references/read-only-analysis.md` |
+| Find risks and write findings | `references/analysis-checklist.md` |
+| Diagrams, writing style, PDF, quality check before delivery | `references/style-and-diagrams.md` |
 
 ## Rules that apply to every task
 
-1. **Read-only, always.** Never create, edit, delete, import, run, activate or deactivate anything: records, workflows, forms, menus, roles, reports. Reading Production is acceptable for documentation when the user agrees; changing it never is. If someone asks for a change, say that this skill only documents and point them to the solution engineering team.
-2. **The user signs in.** Never type passwords. Ask the user to sign in, choose the company and open the app, then confirm the app name shown in the header before reading anything. One account can hold several customers' apps.
-3. **Secrets.** Workflow connectors can hold credentials. Record only *that* a credential exists and where (as a finding). Never print, save or quote the value. Delete raw dumps that contain secrets once parsed.
-4. **Personal data.** Blur names, emails, person IDs and other personal data in every screenshot that is kept or shared.
-5. **Facts, not guesses.** State what was verified. Mark anything inferred as *(inferred)*. Counts and other values that change carry the date they were read.
-6. **Describe the solution as it is, not as it should be.** An existing app shows what was built, not necessarily the right way to build it. Explain it neutrally; put judgements in the findings section with evidence.
-7. **Generic knowledge only in this skill.** Client IDs, app IDs, customer names and project facts go in the project's own notes, never in this skill.
+1. **Read-only, always.** When an existing app is involved, never create, edit, delete, import, run, activate or deactivate anything. Reading Production is acceptable for documentation when the user agrees; changing it never is. Requests to change an app go to the solution engineering team.
+2. **The user signs in.** Never type passwords. Ask the user to sign in, choose the company and open the app, then confirm the app name in the header before reading. One account can hold several customers' apps.
+3. **Secrets.** Record only *that* a credential exists and where (as a finding). Never print, save or quote the value. Interface requirements name the authentication method, never the credential.
+4. **Personal data.** Blur names, emails, person IDs and other personal data in every screenshot kept or shared; requirement examples use invented or anonymised people.
+5. **Facts, not guesses.** State what was verified or stated, with the source. Mark inferred content *(inferred)* and turn it into an open issue. Values that change carry the date they were read.
+6. **What, not how, in requirements.** BRD and SRS describe needs and behaviour in business terms; they do not prescribe forms, workflows or nodes.
+7. **Describe existing solutions as they are.** Judgements go in the findings with evidence.
+8. **Generic knowledge only in this skill.** Client IDs, app IDs, customer names and project facts go in the project's own notes.
 
 ## Output defaults
 
-- **Markdown** by default, one file per deliverable, screenshots in a `screenshots/` folder next to it. **PDF only when asked** (`scripts/md-to-pdf.js`, see `references/style-and-diagrams.md`).
-- **Internal audience.** No customer emails. Open questions go inside the document, each with *why we ask* and *what the answer is needed for*.
-- **No production notes.** Documents name the author and the date. They never mention how they were produced: no AI assistants, browser automation, scripts, file paths or first person. Before delivering, scan for these words.
-- Suggested layout: `<project>/docs/<App-Name>-Documentation.md`, `<App-Name>-PM-Guide.md`, `screenshots/NN-<what>.png`. Never overwrite another app's documents.
+- **Markdown** by default, one file per deliverable, screenshots in `screenshots/`. **PDF only when asked** (`scripts/md-to-pdf.js`, or Quarto for the SRS; see `references/style-and-diagrams.md`).
+- Every document starts with the **document control block** and cites its standard as "structure based on …, tailored for CloudApper solutions". Never claim conformance or certification.
+- **Internal audience** unless the user says a document is customer-shareable. Open questions go inside the document with *why we ask* and *what the answer is needed for*.
+- Documents name the author and the date and never mention how they were produced: no AI assistants, browser automation, scripts, file paths or first person. Scan before delivering.
+- Suggested layout: `<project>/docs/<App-or-Project>-<TYPE>.md` (BRD, SRS, UAT, Technical-Guide, PM-Guide, Analysis), `screenshots/NN-<what>.png`. Never overwrite another project's documents.
 
 ## Process in short
 
-1. **Scope:** which app, which environment, which deliverable, who reads it. Look for existing docs or notes on the app first and read them.
-2. **Collect:** read-only snapshot (structure, workflows, counts, last runs), then a walkthrough of every menu and one record per main form with screenshots (`references/read-only-analysis.md`).
-3. **Understand:** trace the main flow end to end: who starts it, which workflows run, which statuses change, which external systems are called (`references/reading-a-cloudapper-app.md`).
-4. **Analyse:** go through `references/analysis-checklist.md` and write findings with evidence.
-5. **Write:** follow the structure of the chosen deliverable.
-6. **Check:** run the quality checklist in `references/style-and-diagrams.md` before delivering.
+**New solution (requirements):** frame → elicit (sources R-n) → BRD → SRS with acceptance criteria → review and approve (v1.0 baseline) → UAT plan and cases → after the build, as-built technical guide and PM guide → keep traceability current through change requests. Details: `references/requirements-engineering.md`.
+
+**Existing solution (documentation or analysis):** scope → read-only snapshot and walkthrough → trace the main flow → findings → write → quality check. Details: `references/read-only-analysis.md`. Where an existing app has no requirements, an *as-built SRS* can be reverse-engineered (source confidence *Inferred*, confirmed with the customer).
 
 ## Maintaining this skill
 

@@ -1,0 +1,24 @@
+project:
+  render:
+    - SRS.qmd
+
+title: "<Customer – Project>"
+subtitle: "Software Requirements Specification · <solution scope>"
+author: "<author>"
+date: "<YYYY-MM-DD>"
+lang: en
+
+format:
+  typst:
+    papersize: us-letter
+    margin:
+      x: 2cm
+      y: 2.2cm
+    mainfont: "Segoe UI"
+    fontsize: 9.5pt
+    toc: true
+    toc-depth: 2
+    toc-title: "Contents"
+    section-numbering: "1.1"
+    include-before-body:
+      - file: page-style.typ

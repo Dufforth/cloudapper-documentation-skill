@@ -1,0 +1,17 @@
+color:
+  palette:
+    navy: "#0b3d91"
+    blue: "#0b5cd5"
+    ink: "#1f2933"
+  primary: navy
+  foreground: ink
+  background: "#ffffff"
+  link: blue
+
+typography:
+  base:
+    family: "Segoe UI"
+  headings:
+    family: "Segoe UI"
+    weight: 600
+    color: navy
